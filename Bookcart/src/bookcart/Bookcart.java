@@ -7,7 +7,7 @@ package bookcart;
 import java.util.Scanner;
 
 /**
- *gaurav
+ *
  * @author sjadh
  */
 public class Bookcart {
@@ -28,8 +28,9 @@ static Scanner in=new Scanner(System.in);
     Book myBook = new Book();
     int user_choice;
      do {
+      myBook.disp_stock();
         System.out.println();
-        System.out.println("1.ADD CUSTOMER ACCOUNT 2.ADD_INTO_CART 3.DELETE_FROM_CART 4.DISPLAY 5.EXIT");
+        System.out.println("1.ADD CUSTOMER ACCOUNT 2.ADD_INTO_CART 3.DELETE_FROM_CART 4.DISPLAY CART 5.GENETRATE BILL 6.EXIT");
         System.out.println();
         System.out.print("Enter choice: ");
         user_choice = s.nextInt();
@@ -45,8 +46,12 @@ static Scanner in=new Scanner(System.in);
                 int accountNum=in.nextInt();
                  myBook.ADD_cart(accountNum);
                   break;
-            case 3:myBook.disp_cart(user_choice);
+            case 3:myBook.DELETEcart();
                     break;
+            case 4:myBook.disp_cart(user_choice);
+                    break;
+            case 5:myBook.bill();
+                  break;
             default:
                 System.out.println("Plzzzz!!!!! Enter the correct choice");
         }
