@@ -11,6 +11,13 @@ import java.util.Scanner;
  * @author sjadh
  */
 public class Bookcart {
+    int stock[][]=  {{0,19,4000},{1,21,2600},{2,35,4250},{3,30,1200},{4,24,7750},{5,21,7100}};
+ int cart[][]={{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}};
+ String name[][]={{"book"},{"booka"},{"bookb"},{"bookc"},{"bookd"},{"booke"}};
+ int code;
+ int qty; 
+ int flag=0;
+static Scanner in=new Scanner(System.in);
 
     /**
      * @param args the command line arguments
@@ -34,7 +41,12 @@ public class Bookcart {
                     String ca =s.next();
                     System.out.println("Account was created and it has the following number: " + myBook.openNewAccount(cn, ca));
                     break;
-            case 2:
+            case 2:System.out.println("Enter account number"); 
+                int accountNum=in.nextInt();
+                 myBook.ADD_cart(accountNum);
+                  break;
+            case 3:myBook.disp_cart(user_choice);
+                    break;
             default:
                 System.out.println("Plzzzz!!!!! Enter the correct choice");
         }
