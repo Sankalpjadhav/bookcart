@@ -6,24 +6,19 @@
 package bookcart;
 import java.util.Scanner;
 
-/**
- *
- * @author sjadh
- */
+
 public class Bookcart {
-    int stock[][]=  {{0,19,4000},{1,21,2600},{2,35,4250},{3,30,1200},{4,24,7750},{5,21,7100}};
- int cart[][]={{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}};
- String name[][]={{"book"},{"booka"},{"bookb"},{"bookc"},{"bookd"},{"booke"}};
- int code;
- int qty; 
- int flag=0;
-static Scanner in=new Scanner(System.in);
 
     /**
      * @param args the command line arguments
+     * This Class Displays Menu
+     * 1.For OPening Account 2.For Adding Book In Cart 3.For deleting Book
+     * 4.for display Cart
      */
+
     public static void main(String[] args) {
        Scanner s = new Scanner(System.in);
+       Scanner in =new Scanner(System.in); 
     Bookcart BookAccount =new Bookcart();
     Book myBook = new Book();
     int user_choice;
@@ -54,5 +49,7 @@ static Scanner in=new Scanner(System.in);
         }
      while(user_choice != 5);
     }
+
+    
     
 }

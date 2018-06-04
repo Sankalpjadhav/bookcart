@@ -8,11 +8,13 @@ package bookcart;
 import java.util.Scanner;
 
 /**
- *
+ *This class Shows Us Option Of books Along with Their code And Name
+ * Stock Cart Shows Us Books Avaliable 
+ * Name Array Shows US Name Of book
  * @author sjadh
  */
-class Book {
-    bookcart.BookAccount[] accounts;     
+public class Book {
+ bookcart.BookAccount[]accounts;     
  int noOfAccounts = 10;
  int stock[][]=  {{0,19,4000},{1,21,2600},{2,35,4250},{3,30,1200},{4,24,7750},{5,21,7100}};
  int cart[][]={{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}};
@@ -21,6 +23,7 @@ class Book {
  int qty; 
  int flag=0;
  static Scanner in=new Scanner(System.in);
+ 
  public void book()
  {
      accounts = new bookcart.BookAccount[10];
@@ -37,6 +40,12 @@ class Book {
     
  
 }
+ /**
+ * This Part Of Code Adds The Required Item In Cart
+ * It Increases The Quantity Of item In Cart 
+ * And Decreases The Same Quantity From The Stock Available
+ * Items Are Selected with Help Of Code 2
+ */
 public void ADD_cart(int accountNum)
 {   
                System.out.println("enter the code");
