@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  *This class Shows Us Option Of books Along with Their code And Name
  * Stock Cart Shows Us Books Avaliable 
- * Name Array Shows US Name Of book
+ * Name Array Shows US Name Of book .
  * @author sjadh
  */
 public class Book {
