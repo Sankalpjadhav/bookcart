@@ -7,7 +7,8 @@ package bookcart;
 import java.util.Scanner;
 
 /**
- *
+ *This is our Book cart Application
+ * This Application provides various Operations like ADD customer Account, add books to cart,delete and Display
  * @author sjadh
  */
 public class Bookcart {
@@ -35,14 +36,14 @@ public class Bookcart {
         user_choice = s.nextInt();
         switch (user_choice) {
             case 1: 
-                System.out.println("Enter a customer name");
+                    System.out.println("Enter a customer name:");
                     String cn = s.next();
-                    System.out.println("Enter a customer Address");
+                    System.out.println("Enter a customer Address:");
                     String ca =s.next();
                     System.out.println("Account was created and it has the following number: " + myBook.openNewAccount(cn, ca));
                     break;
             case 2: myBook.display_stock();
-                System.out.println("Enter account number"); 
+                System.out.println("Enter account number:"); 
                 int accountNum=in.nextInt();
                  myBook.ADD_cart(accountNum);
                   break;

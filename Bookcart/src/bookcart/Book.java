@@ -18,52 +18,59 @@ public class Book {
  int noOfAccounts = 10;
  int stock[][]=  {{0,19,4000},{1,21,2600},{2,35,4250},{3,30,1200},{4,24,7750},{5,21,7100}};
  int cart[][]={{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}};
- String name[][]={{"book1"},{"book2"},{"book3"},{"book4"},{"book5"},{"book6"}};
+ String name[][]={{"The Best We Could Do."},{"Escaped winter days."},{"Study without fear."},{"The Sympathizer."},{"Step by step JAVA."},{"How I escaped from war."}};
  int code;
  int qty; 
  int flag=0;
  static Scanner in=new Scanner(System.in);
  
+ /**
+  * Initially  A new Bank object initially doesn’t contain any accounts.
+  */
  public void book()
  {
      accounts = new bookcart.BookAccount[10];
     noOfAccounts = 0;
  }
+ /**
+  * Creates a new bank account using the customer name and the opening balance given as parameters.
+  * @param customerName-Name of the customer.
+  * @param customerAddress-Address of customer.
+  * @return Account number
+  */
  
  public int openNewAccount(String customerName, String customerAddress) {
 
   
         BookAccount b=new BookAccount(customerName,customerAddress);
         noOfAccounts++;
-        return b.getAccountNum();
-        
-    
- 
+        return b.getAccountNum(); 
 }
  /**
  * This Part Of Code Adds The Required Item In Cart
  * It Increases The Quantity Of item In Cart 
  * And Decreases The Same Quantity From The Stock Available
  * Items Are Selected with Help Of Code 2
+     * @param accountNum-Account number.
  */
 public void ADD_cart(int accountNum)
 {   
-               System.out.println("enter the code");
+               System.out.println("Enter the code:");
         code =in.nextInt();
   
          if(code<0||code>5)
          {
-                System.out.println("invalid code");
+                System.out.println("Invalid code!!!!");
                 ADD_cart(accountNum);
                 
           }
 
          else
          {
-            System.out.println("enter the quantity to be added");
+            System.out.println("Enter the quantity to be added:");
             qty=in.nextInt();
             if (qty >stock[code][1]){
-                System.out.println("not valid");
+                System.out.println("Not valid!!!");
             }
             else{
             cart[code][1] +=qty;
@@ -86,7 +93,7 @@ public int check(int b){
     if(cart[i][1]!=0){
     flag++;}
     if(flag==0){
-        System.out.println("shopping cart is empty");
+        System.out.println("Shopping cart is empty!!!!");
         return 0;
     }
     else{
@@ -95,7 +102,7 @@ public int check(int b){
     if(cart[i][1]!=0){
     
     System.out.println(cart[i][0]+"\t"+"\t"+cart[i][1]+"\t"+"\t"+cart[i][2]);
-    System.out.println("UPDATED STOCK ");
+    System.out.println("UPDATED STOCK: ");
       System.out.println("CODE \t QUANTITY\t\tRATE  ");
     System.out.println(stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+stock[i][2]);
     }   
@@ -106,25 +113,25 @@ public int check(int b){
     return 1;
 }
     public void DELETEcart(){
-        System.out.println("enter the code");
+        System.out.println("Enter the code:");
   code =in.nextInt();
   
   if(code<0||code>5)
   {
-      System.out.println("invalid code");
+      System.out.println("Invalid code!!!");
       DELETEcart();
   }
   if(cart[code][1]==0){
   
-  System.out.println("item not available");
+  System.out.println("Item not available");
   }
   else{
-  System.out.println("enter the quantity to be reduced");
+  System.out.println("Enter the quantity to be reduced:");
   qty=in.nextInt();
   if(cart[code][1]<qty)
       
   {
-      System.out.println("WARNINIG:excess quantity entered");
+      System.out.println("WARNINIG:Excess quantity entered");
       
   }
   else{
@@ -142,13 +149,13 @@ public int check(int b){
          
         
         }
-    System.out.println("YOUR TOTAL BILL IS RS."+ amt);
+    System.out.println("YOUR TOTAL BILL IS RS:"+ amt);
     
     }
- void disp_stock(){
+ void display_stock(){
  int i;
  System.out.println("..............................BOOK STOCK.........................................");
- System.out.println("\tBOOK_NAME\t\tCODE\t\tQUANTITY\t\tRATE\t ");
+ System.out.println("\tBOOK_NAME\t\t\t\tCODE\t\tQUANTITY\t\tRATE\t ");
  for(i=0;i<6;i++){
  System.out.println("\t"+name[i][0]+"\t"+"\t"+"\t"+stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+"\t"+stock[i][2]);
  }

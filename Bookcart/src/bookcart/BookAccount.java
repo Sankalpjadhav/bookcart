@@ -6,9 +6,9 @@
 package bookcart;
 
 /**
- *
+ *This class is used to find the account number of the user .
  * @author sjadh
- * 
+ * it returns the account number to the calling function.
  */
 public class BookAccount {
     
