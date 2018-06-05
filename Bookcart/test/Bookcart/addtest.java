@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sushrut
+ * @author sushrutn
  */
 public class addtest {
     Book b;
