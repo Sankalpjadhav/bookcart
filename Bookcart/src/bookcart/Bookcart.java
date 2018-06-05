@@ -16,8 +16,9 @@ public class Bookcart {
     /**
      * @param args the command line arguments
      * This Class Displays Menu
-     * 1.For OPening Account 2.For Adding Book In Cart 3.For deleting Book
-     * 4.for display Cart
+     * 1.For OPening Account 2.For Adding Book In Cart 3.For Removing Book
+     * 4.for display Cart 5.Generating Bill 6.Exit 
+     * User has to choose from the above option
      */
 
     public static void main(String[] args) {
@@ -26,11 +27,15 @@ public class Bookcart {
     Bookcart BookAccount =new Bookcart();
     Book myBook = new Book();
     int user_choice;
-    myBook.display_stock();
      do {
-      
+
+         System.out.println("");
+              System.out.println("");
+                   System.out.println("");
+     
+
         System.out.println();
-        System.out.println("1.ADD CUSTOMER ACCOUNT 2.ADD_INTO_CART 3.DELETE_FROM_CART 4.DISPLAY CART 5.GENETRATE BILL 6.EXIT");
+        System.out.println("1.ADD CUSTOMER ACCOUNT 2.ADD_INTO_CART 3.REMOVE_FROM_CART 4.DISPLAY CART 5.GENETRATE BILL 6.EXIT");
         System.out.println();
         System.out.print("Enter choice: ");
         user_choice = s.nextInt();
@@ -42,8 +47,12 @@ public class Bookcart {
                     String ca =s.next();
                     System.out.println("Account was created and it has the following number: " + myBook.openNewAccount(cn, ca));
                     break;
-            case 2: myBook.display_stock();
-                System.out.println("Enter account number:"); 
+
+            
+
+            case 2: myBook.disp_stock();
+                System.out.println("Enter account number"); 
+
                 int accountNum=in.nextInt();
                  myBook.ADD_cart(accountNum);
                   break;

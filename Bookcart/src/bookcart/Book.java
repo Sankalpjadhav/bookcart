@@ -18,7 +18,10 @@ public class Book {
  int noOfAccounts = 10;
  int stock[][]=  {{0,19,4000},{1,21,2600},{2,35,4250},{3,30,1200},{4,24,7750},{5,21,7100}};
  int cart[][]={{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}};
+
  String name[][]={{"The Best We Could Do."},{"Escaped winter days."},{"Study without fear."},{"The Sympathizer."},{"Step by step JAVA."},{"How I escaped from war."}};
+
+
  int code;
  int qty; 
  int flag=0;
@@ -50,8 +53,12 @@ public class Book {
  * This Part Of Code Adds The Required Item In Cart
  * It Increases The Quantity Of item In Cart 
  * And Decreases The Same Quantity From The Stock Available
+<<<<<<< HEAD
  * Items Are Selected with Help Of Code 2
      * @param accountNum-Account number.
+=======
+ * Items Are Selected with Help Of Code 
+>>>>>>> origin/master
  */
 public void ADD_cart(int accountNum)
 {   
@@ -87,6 +94,15 @@ public int check(int b){
     }
     return b=1;
 }
+/** 
+ *This method checks the cart status
+ * and displays the books present in the cart
+ * This method also displays the updated book stock after every add and remove operations.
+ 
+ 
+ 
+ 
+ */
     public int disp_cart(int flag){
     int i;
     for(i=0;i<6;i++){
@@ -97,14 +113,23 @@ public int check(int b){
         return 0;
     }
     else{
+     System.out.println("..........MY CART.........");
     System.out.println("CODE \t QUANTITY\t\tRATE  ");
     for(i=0;i<6;i++){
     if(cart[i][1]!=0){
     
     System.out.println(cart[i][0]+"\t"+"\t"+cart[i][1]+"\t"+"\t"+cart[i][2]);
+
     System.out.println("UPDATED STOCK: ");
       System.out.println("CODE \t QUANTITY\t\tRATE  ");
     System.out.println(stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+stock[i][2]);
+
+     System.out.println(".........................................UPDATED BOOK STOCK.........................................");
+ System.out.println("\tBOOK_NAME\t\tCODE\t\tQUANTITY\t\tRATE\t ");
+ 
+ System.out.println("\t"+name[i][0]+"\t"+"\t"+"\t"+stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+"\t"+stock[i][2]+"\t"+"\t");
+ 
+
     }   
     }
     }
@@ -112,6 +137,12 @@ public int check(int b){
     }
     return 1;
 }
+    /**
+ * This Part Of Code Removes The Required book from the Cart
+ * It Increases The Quantity Of that book In the stock
+ * And Decreases The Same Quantity From cart
+ * Items Are Selected with Help Of Code 
+ */
     public void DELETEcart(){
         System.out.println("Enter the code:");
   code =in.nextInt();
@@ -142,6 +173,9 @@ public int check(int b){
           }
   }    
 }
+    /**
+ * This Part Of code Generates and displays the net bill of a customer.
+ */
     void bill(){
         int i;int amt=0;
         for(i=0;i<6;i++){
@@ -152,7 +186,14 @@ public int check(int b){
     System.out.println("YOUR TOTAL BILL IS RS:"+ amt);
     
     }
- void display_stock(){
+
+ void disp_stock(){
+
+    /**
+     * This code displays th books in stalk along with the book code,number of books available,price of the book. 
+     */
+ 
+
  int i;
  System.out.println("..............................BOOK STOCK.........................................");
  System.out.println("\tBOOK_NAME\t\t\t\tCODE\t\tQUANTITY\t\tRATE\t ");
