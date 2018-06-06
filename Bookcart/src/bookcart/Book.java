@@ -1,4 +1,5 @@
 /*
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -28,7 +29,7 @@ public class Book {
  static Scanner in=new Scanner(System.in);
  
  /**
-  * Initially  A new Bank object initially doesn’t contain any accounts.
+  * Initially  A new Book object initially doesn’t contain any accounts.
   */
  public void book()
  {
@@ -36,7 +37,7 @@ public class Book {
     noOfAccounts = 0;
  }
  /**
-  * Creates a new bank account using the customer name and the opening balance given as parameters.
+  * Creates a new book account using the customer name and the opening balance given as parameters.
   * @param customerName-Name of the customer.
   * @param customerAddress-Address of customer.
   * @return Account number
@@ -53,12 +54,11 @@ public class Book {
  * This Part Of Code Adds The Required Item In Cart
  * It Increases The Quantity Of item In Cart 
  * And Decreases The Same Quantity From The Stock Available
-<<<<<<< HEAD
- * Items Are Selected with Help Of Code 2
+
      * @param accountNum-Account number.
 =======
  * Items Are Selected with Help Of Code 
->>>>>>> origin/master
+
  */
 public void ADD_cart(int accountNum)
 {   
@@ -190,7 +190,7 @@ public int check(int b){
  void disp_stock(){
 
     /**
-     * This code displays th books in stalk along with the book code,number of books available,price of the book. 
+     * This code displays the books in stalk along with the book code,number of books available,price of the book. 
      */
  
 
