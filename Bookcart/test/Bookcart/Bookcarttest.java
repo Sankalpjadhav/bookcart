@@ -6,6 +6,7 @@ package Bookcart;
  * and open the template in the editor.
  */
 
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,7 +19,7 @@ import static org.junit.Assert.*;
  * @author sjadh
  */
 public class Bookcarttest {
-    Book b;
+    Booktest b;
     
     public Bookcarttest() {
     }
@@ -33,7 +34,7 @@ public class Bookcarttest {
     
     @Before
     public void setUp() {
-        b=new Book();
+        b=new Booktest();
     }
     
     @After
@@ -53,4 +54,5 @@ public class Bookcarttest {
    public void testStock_display(){
         assertEquals("The Sympathizer",b.testStock_display("The Sympathizer"));
     }
+
 }

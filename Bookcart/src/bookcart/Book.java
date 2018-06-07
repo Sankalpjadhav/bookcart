@@ -125,7 +125,7 @@ public int check(int b){
     System.out.println(stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+stock[i][2]);
 
      System.out.println(".........................................UPDATED BOOK STOCK.........................................");
- System.out.println("\tBOOK_NAME\t\tCODE\t\tQUANTITY\t\tRATE\t ");
+ System.out.println("\tBOOK_NAME\t\t\t\tCODE\t\tQUANTITY\t\tRATE\t ");
  
  System.out.println("\t"+name[i][0]+"\t"+"\t"+"\t"+stock[i][0]+"\t"+"\t"+stock[i][1]+"\t"+"\t"+"\t"+stock[i][2]+"\t"+"\t");
  

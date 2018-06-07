@@ -62,12 +62,13 @@ public class Bookcart {
                     break;
             case 5:myBook.bill();
                   break;
+            case 6: System.exit(0);
             default:
                 System.out.println("Plzzzz!!!!! Enter the correct choice");
         }
             
         }
-     while(user_choice != 5);
+     while(user_choice != 6);
     }
 
     

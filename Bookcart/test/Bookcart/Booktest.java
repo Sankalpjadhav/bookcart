@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Bookcart;
 
 /**
  *
  * @author sjadh
  */
-public class Book {
+public class Booktest {
+
      int testAdd_cust_acc(int accno)
     {
         int balance;
@@ -34,4 +36,7 @@ public class Book {
       }
 }
 
+
+
+    
 
