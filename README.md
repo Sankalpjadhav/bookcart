@@ -45,4 +45,4 @@ TEAM:-
 
 GUIDE:-
 
-> prof. Ajay Acharya 
+> Prof. Ajay Acharya 
