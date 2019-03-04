@@ -35,14 +35,4 @@ TO INSTALL THE APPLICATION:-
 
 git clone https://github.com/Sankalpjadhav/bookcart.git
 
-TEAM:-  
-        
-> Gaurav Nevrekar   -   2GI16CS186
-
-> Sushrut Naik      -   2GI16CS160
-
-> Sankalp jadhav    -   2GI16CS184
-
-GUIDE:-
-
-> Prof. Ajay Acharya 
+Thank you!!!
